@@ -89,7 +89,6 @@ header.masthead{
   height: 100%;
   padding-top: 8rem;
   padding-bottom: calc(10rem - 56px);
-  background-color: black;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -121,6 +120,31 @@ img.planetImages {
 .swiper-slide {
   display: flex;
   justify-content: center;
+}
+
+/*____________________________________________________________________________________*/
+/* Contacts */
+
+img.people {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+i.fab {
+  font-size: 42px;
+  color: #000000;
+  margin: 0 25px;
+}
+hr {
+  width: 100%;
+  border-width: 5px;
+  border-color: #000000;
+  border-style: double;
+}
+
+.employeeTeam p {
+  font-size: 12px;
+  width: 60%;
 }
 
 /*____________________________________________________________________________________*/
