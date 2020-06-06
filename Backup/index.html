@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Welcome to my blog.">
+    <meta name="author" content="Rayna Weeden">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/background.jpg">
+
+    <title>Tinkerlabs</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Style Css -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <!-- Font/icon List -->
+
+  </head>
+
+  <body>
+
+    <header class="masthead">
+      <img id="bgHead" class="hidden " src="img/background.jpg" alt="#" width="0" height="0">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 mx-auto rocketWrap">
+            <img class="rocketSide " alt="#" src="img/external-content.duckduckgo.com.jpeg">
+            <h2 id="belowText"></h2>
+          </div>
+          <div class="col-lg-10 mx-auto textbox hidden">
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h2>Rocket Loader</h2>
+        <div class="rocketAnimationWrapper">
+          <img class="rocketAnimationOne" alt="#" src="img/external-content.duckduckgo.com.jpeg">
+        </div>
+      </div>
+    </div>
+    -->
+
+    <!--
+    <div class="row">
+      <div class="col-lg-10">
+        <img class="drawLine draw" alt="#" src="img/external-content.duckduckgo.com.jpeg">
+      </div>
+    </div>
+    -->
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/main.js"></script>
+
+    <script>
+      window.onload = function() {
+        setTimeout( function() {
+          showText('#belowText', 'Building From The Past', 0, 75)
+        }, 2000)
+        setTimeout( function() {
+          document.getElementById('belowText').innerHTML = '';
+          showText('#belowText', 'To Create The Future', 0, 75)
+        }, 5950)
+        setTimeout( function() {
+          document.getElementById('bgHead').classList.remove('hidden');
+          document.getElementById('bgHead').classList.add('shown');
+        }, 7955)
+        setTimeout( function() {
+          document.getElementById('bgHead').classList.remove('hidden');
+          document.getElementById('bgHead').classList.add('shown');
+        }, 7955)
+        setBgHead()
+      }
+    </script>
+
+  </body>
+
+</html>
