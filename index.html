@@ -4,8 +4,7 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="description" content="Welcome to my blog.">
-  <meta name="author" content="Rayna Weeden">
+  <meta name="description" content="Welcome to TinkerLabs! ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="img/background.jpg">
 
@@ -22,11 +21,11 @@
 
 </head>
 
-<body>
+<body id=body>
 
   <!-- Nav Bar -->
 
-  <nav id="menuTemp" class="navbar navbar-expand-xl navbar-togglable fixed-top">
+  <nav id="menuTemp" class="navbar navbar-expand-xl navbar-togglable fixed-top" style="background-color: transparent">
     <div class="container">
 
       <!-- Toggler -->
@@ -39,7 +38,7 @@
         <!-- Heading -->
         <ul class="nav navbar-nav mr-auto custom-navbar">
           <li class="navbar navbar-light">
-            <span id="navbarBrand" class="navbar-brand">TinkerLabs</span>
+            <span id="navbarBrand" class="navbar-brand" style="color: #CECCD1">TinkerLabs</span>
           </li>
         </ul>
 
@@ -53,19 +52,25 @@
           </li>
 
           <li class="nav-item active">
-            <a id="homeLink" class="nav-link" href="#">
+            <a id="homeLink" class="nav-link sliding-link" href="#home" style="color: #CECCD1">
               Home
             </a>
           </li>
 
           <li class="nav-item">
-            <a id="aboutLink" class="nav-link" href="Pages/about.html">
+            <a id="aboutLink" class="nav-link sliding-link" href="#aboutUs" style="color: #CECCD1">
               About us
             </a>
           </li>
 
           <li class="nav-item">
-            <a id="contactLink" class="nav-link" href="Pages/poems.html">
+            <a id="teamLink" class="nav-link sliding-link" href="#meetUs" style="color: #CECCD1">
+              Meet The Team
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a id="contactLink" class="nav-link sliding-link" href="#contacts" style="color: #CECCD1">
               Contacts
             </a>
           </li>
@@ -88,12 +93,12 @@
 
 
 
-  <header id="masthead" class="masthead">
+  <header id="masthead" class="masthead" style="background-image:  linear-gradient(to bottom right, #504E51, #615F62)">
     <div class="container d-flex align-items-center">
       <div class="row">
         <div class="col-lg-10 mx-auto d-flex flex-column justify-content-center">
-          <h4 id="mastHeader"></h4>
-          <p id="mastParagraph"></p>
+          <h4 id="mastHeader" style="color: #7b7b7b">v1.0 Mercury</h4>
+          <p id="mastParagraph" style="color: #CECCD1">Something else here</p>
         </div>
         <div class="col-lg-12 mx-auto d-flex justify-content-center">
           <div class="align-self-center">
@@ -175,6 +180,12 @@
       </div>
     </section>
 
+    <!-- Section Divider -->
+    <div>
+      <img class="imgDivider" src="img/divider.png" alt="...">
+      <!--Photo by Pixabay-->
+    </div>
+
     <!-- Meet The Team Section -->
     <section id="meetUs">
       <div class="container">
@@ -235,6 +246,12 @@
       </div>
     </section>
 
+    <!-- Section Divider -->
+    <div>
+      <img class="imgDivider" src="img/divider.png" alt="...">
+      <!--Photo by Pixabay-->
+    </div>
+
     <!-- Contacts Section -->
     <section id="contacts">
       <div class="container">
@@ -270,6 +287,16 @@
 
   </main>
 
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <p>TinkerLabs&copy;|2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="js/jquery.min.js"></script>
@@ -282,7 +309,6 @@
   <!-- Custom scripts for this template -->
   <script src="js/main.js"></script>
 
-  <script>window.onload(mercuryColor());</script>
   <script>
     var mySwiper = new Swiper('.swiper-container', {
       // Optional parameters
@@ -296,8 +322,6 @@
         el: '.swiper-pagination',
         type: 'bullets',
       },
-
-
     })
   </script>
 
