@@ -1,9 +1,11 @@
 'use strict';
+/*____________________________________________________________________________________*/
 // Varibles
 var dl = document.getElementById('drawLine');
 var mastHeader = document.getElementById('mastHeader');
 var mastParagraph = document.getElementById('mastParagraph');
 
+/*____________________________________________________________________________________*/
 // Constants
 const sliderContainer = document.getElementById('sliderContainer');
 const mercurySlide = document.getElementById('mercurySlide');
@@ -25,7 +27,9 @@ const mainNav = document.getElementById('menuTemp');
 const body = document.getElementById('body');
 
 /*
+____________________________________________________________________________________
 Functions
+____________________________________________________________________________________
 */
 
 $(".sliding-link").click(function(e) {
@@ -35,7 +39,7 @@ $(".sliding-link").click(function(e) {
     $('html,body').animate({scrollTop: $(aid).offset().top},1500);
 });
 
-// searchCSS, setCSS, and find_replaceCSS were all rewritten from
+// setCSS and find_replaceCSS were all rewritten from
 // http://www.javascriptkit.com/dhtmltutors/externalcss3.shtml
 // using the "styleSheet" object
 
@@ -46,15 +50,15 @@ function setCSS(stylesheet, rule, styleType, replacement) {
 }
 
 function find_replaceCSS(stylesheet, tag, styleType, replacement) {
-  var css = document.styleSheets[stylesheet]
-  var cssRule = css.cssRules? css.cssRules: css.rules;
-  var i;
-  for (i = 0; i < cssRule.length; i++){
-    if(cssRule[i].selectorText.toLowerCase() == tag){
+  var mainCss = document.styleSheets[stylesheet]
+  var firstrule = mainCss.cssRules? mainCss.cssRules: mainCss.rules;
+  var i; // The varable 'i' must be initialized before the loop or it will break.
+  for (i=0; i<firstrule.length; i++){
+    if(firstrule[i].selectorText.toLowerCase() == tag){
       break;
     }
   }
-  var cssRuleNumber = css.cssRules? css.cssRules[i]: css.rules[i];
+  var cssRuleNumber = mainCss.cssRules? mainCss.cssRules[i]: mainCss.rules[i];
   cssRuleNumber.style[styleType]  = replacement;
 }
 
@@ -216,54 +220,6 @@ function neptuneColor() {
 Event Listners
 */
 
-// https://stackoverflow.com/a/31223774
-var lastScrollTop = 0;
-// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
-window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
-   var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-   if (st >= 100){
-     console.log('Below')
-   } else {
-     console.log('Above')
-   }
-   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-}, false);
-
-// These controles are to reset the color scheme based on current planet active.
-
-sliderContainer.addEventListener('mousemove', function() {
-  if (mercurySlide.classList.contains('swiper-slide-active')) {
-    console.log("mercurySlide is active");
-    mercuryColor();
-  }
-  else if (venusSlide.classList.contains('swiper-slide-active')) {
-    venusColor()
-  }
-  else if (earthSlide.classList.contains('swiper-slide-active')) {
-    earthColor()
-  }
-  else if (marsSlide.classList.contains('swiper-slide-active')) {
-    marsColor()
-  }
-  else if (jupiterSlide.classList.contains('swiper-slide-active')) {
-    jupiterColor()
-  }
-  else if (saturnSlide.classList.contains('swiper-slide-active')) {
-    saturnColor()
-  }
-  else if (uranusSlide.classList.contains('swiper-slide-active')) {
-    uranusColor()
-  }
-  else if (neptuneSlide.classList.contains('swiper-slide-active')) {
-    neptuneColor()
-  }
-  else if (mercurySlide.classList.contains('swiper-slide-active')) {
-    mercuryColor();
-  }
-});
-
-sliderContainer.addEventListener('touchstart', function(event) {
-  if (event.target.tagName.toLowerCase() === 'li') {
-    // do your action on your 'li' or whatever it is you're listening for
-  }
+$(body).scroll(function(){
+	$('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
 });
