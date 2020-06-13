@@ -280,7 +280,7 @@
           </div>
           <div class="col-lg-4 mx-auto">
             <h3>Location</h3>
-            <div id="map"></div>
+              <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11797.969336701106!2d-83.05651317130867!3d42.332025619511626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d303ce9ffbf%3A0x8b6a8ca1e775a314!2sWeWork!5e0!3m2!1sen!2sus!4v1592039913878!5m2!1sen!2sus" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
         </div>
       </div>
@@ -306,25 +306,9 @@
 
   <!-- Plugin JavaScript -->
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYVpdLYgymObyjSzw3NNYwbaMIWilnYV4&callback=initMap">
-  </script>
 
   <!-- Custom scripts for this template -->
   <script src="js/main.js"></script>
-
-  <script>
-    // Initialize and add the map
-    function initMap() {
-      // The location of Uluru
-      var wework = {lat: 42.332, lng: -83.0477};
-      // The map, centered at Uluru
-      var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 4, center: wework});
-      // The marker, positioned at Uluru
-      var marker = new google.maps.Marker({position: wework, map: map});
-    }
-  </script>
   <script>
     // This sets conditons for the swiper container
     var mySwiper = new Swiper('.swiper-container', {
